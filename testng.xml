@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Nop commerce">
+    <parameter name="browser" value=""/>
+    <test name="check registration with Valid Data">
+        <classes>
+            <class name="testcases.TC01_Registration">
+                <methods>
+                    <include name="registernewuser_P"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="check login with Valid Data">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testcases.TC02_LoginPage">
+                <methods>
+                    <include name="user_login_successfully"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="check the rest password">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testcases.TC03_RestPassword">
+                <methods>
+                    <include name="ResetPasswordSuccessfully"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Search For Product">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testcases.TC04_SearchForProductPage">
+                <methods>
+                    <include name="SearchForProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Change Currency">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testcases.TC05_ChangeCurrency">
+                <methods>
+                    <include name="ChangeCurrency"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Select Random Category">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testcases.TC06_SelectRandomCategory">
+                <methods>
+                    <include name="SelectRandomCategory"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!--    <test name="Filter With Color">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC07_UserFilterWithColor">-->
+<!--                <methods>-->
+<!--                    <include name="UserCanFilterProductWithColor"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Add Product To Shopping Cart">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC09_AddProductsToShoppingCart">-->
+<!--                <methods>-->
+<!--                    <include name="AddProductsToShoppingCart"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Add Product To Wish List">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC10_AddProductsToWishlist">-->
+<!--                <methods>-->
+<!--                    <include name="AddProductsToWishlist"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Add Product To Compare List">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC11_AddProductsToComparelist">-->
+<!--                <methods>-->
+<!--                    <include name="AddProductsToComparelist"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Create successful Order">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC12_CreateSuccessfulOrder">-->
+<!--                <methods>-->
+<!--                    <include name="ConfirmOrder"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
