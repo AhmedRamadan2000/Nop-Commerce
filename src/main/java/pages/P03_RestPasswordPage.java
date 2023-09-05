@@ -32,8 +32,7 @@ public class P03_RestPasswordPage {
         return this;
     }
 
-    public P03_RestPasswordPage checkConfirmationMessage() {
-        driver.findElement(this.ConfirmationMessage).isDisplayed();
-        return this;
+    public boolean checkConfirmationMessage() {
+        return driver.findElement(this.ConfirmationMessage).getText().equals("Email with instructions has been sent to you");
     }
 }

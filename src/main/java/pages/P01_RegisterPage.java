@@ -28,6 +28,8 @@ public class P01_RegisterPage {
     private final By Confirm_password = By.id("ConfirmPassword");
     private final By register_button = By.xpath("//button[@name='register-button']");
 
+    private final By ConfirmRegistration = By.xpath("//div[@class=\"result\"]");
+
     public P01_RegisterPage selectGender() {
         driver.findElement(this.Gender).click();
         return this;
@@ -84,5 +86,9 @@ public class P01_RegisterPage {
     public P01_RegisterPage clickRegister_button() {
         driver.findElement(this.register_button).click();
         return this;
+    }
+
+    public boolean confirmationMessage() {
+        return driver.findElement(this.ConfirmRegistration).getText().equals("Your registration completed");
     }
 }

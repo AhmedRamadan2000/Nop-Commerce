@@ -15,6 +15,7 @@ public class P06_SelectRandomCategory {
     //define locators
     private final By hoverCategory = By.xpath("//body/div[6]/div[2]/ul[1]/li[3]/a[1]");
     private final By selectedCategory = By.xpath("//body/div[6]/div[2]/ul[1]/li[3]/ul[1]/li[1]/a[1]");
+    private final By categoryTitle = By.xpath("//h1[contains(text(),'Shoes')]");
 
     public P06_SelectRandomCategory hoverOnCategory(WebDriver driver) {
         this.driver = driver;
@@ -26,5 +27,9 @@ public class P06_SelectRandomCategory {
     public P06_SelectRandomCategory selectedCategory() {
         driver.findElement(this.selectedCategory).click();
         return this;
+    }
+
+    public boolean  CheckCategoryTitle(){
+        return  driver.findElement(this.categoryTitle).getText().equals("Shoes");
     }
 }

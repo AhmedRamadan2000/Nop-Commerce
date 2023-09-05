@@ -43,13 +43,20 @@ public class P11_AddProductsToComparelist {
         return this;
     }
 
-    public P11_AddProductsToComparelist Product1AddedToLIst() {
-        driver.findElement(this.Product1InTable).isDisplayed();
-        return this;
+//    public P11_AddProductsToComparelist Product1AddedToLIst() {
+//        driver.findElement(this.Product1InTable).isDisplayed();
+//        return this;
+//    }
+    public boolean Product1AddedToLIst(){
+        return  driver.findElement(this.Product1InTable).getText().equals("Flower Girl Bracelet");
     }
 
-    public P11_AddProductsToComparelist Product2AddedToLIst() {
-        driver.findElement(this.Product2InTable).click();
-        return this;
+    public boolean Product2AddedToLIst(){
+        return  driver.findElement(this.Product2InTable).getText().equals("Vintage Style Engagement Ring");
     }
+
+//    public P11_AddProductsToComparelist Product2AddedToLIst() {
+//        driver.findElement(this.Product2InTable).click();
+//        return this;
+//    }
 }

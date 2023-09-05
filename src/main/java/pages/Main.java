@@ -14,7 +14,9 @@ public class Main {
     }
 
     //define locators
-    private final By loginlink = By.xpath("//a[contains(text(),'Log in')]");
+//    private final By loginlink = By.xpath("//a[contains(text(),'Log in')]");
+
+    private final By loginlink = By.linkText("Log in");
 
     private final By Registerlink = By.xpath("//a[@class='ico-register']");
 

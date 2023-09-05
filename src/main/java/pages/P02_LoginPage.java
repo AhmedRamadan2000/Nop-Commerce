@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class P02_LoginPage {
+
     //define driver
     WebDriver driver;
 
@@ -15,7 +16,9 @@ public class P02_LoginPage {
     private final By Email = By.id("Email");
     private final By Password = By.id("Password");
     private final By LoginButton = By.xpath("//button[contains(text(),'Log in')]");
-    private final By continue_button = By.xpath("//a[contains(text(),'Continue')]");
+//    private final By continue_button = By.xpath("//a[contains(text(),'Continue')]");
+
+    private final By LogoutButton = By.xpath("//a[contains(text(),'Log out')]");
 
     public P02_LoginPage addUserEmail(String email) {
         driver.findElement(this.Email).sendKeys(email);
@@ -32,8 +35,7 @@ public class P02_LoginPage {
         return this;
     }
 
-    public P02_LoginPage clickContinue_button() {
-        driver.findElement(this.continue_button).click();
-        return this;
+    public boolean LogoutButton() {
+        return driver.findElement(this.LogoutButton).getText().equals("Log out");
     }
 }

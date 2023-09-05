@@ -14,15 +14,19 @@ public class P07_UserFilterWithColor {
     // define locators
     private final By colorRed = By.xpath("//input[@id='attribute-option-15']");
 
-    private final By Product = By.cssSelector("div.master-wrapper-page:nth-child(7) div.master-wrapper-content div.master-column-wrapper div.center-2 div.page.category-page div.page-body div.products-container div.products-wrapper div.product-grid div.item-grid div.item-box div.product-item div.details h2.product-title > a:nth-child(1)");
+    private final By Product = By.xpath("//a[contains(text(),'adidas Consortium Campus 80s Running Shoes')]");
 
     public P07_UserFilterWithColor selectColor() {
         driver.findElement(this.colorRed).click();
         return this;
     }
 
-    public P07_UserFilterWithColor ProductAppear() {
-        driver.findElement(this.Product).isDisplayed();
-        return this;
+//    public P07_UserFilterWithColor ProductAppear() {
+//        driver.findElement(this.Product).isDisplayed();
+//        return this;
+//    }
+
+    public boolean  VerifyProductThatAppear(){
+        return  driver.findElement(this.Product).getText().equals("adidas Consortium Campus 80s Running Shoes");
     }
 }
