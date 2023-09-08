@@ -27,8 +27,8 @@ public class P01_RegisterPage {
     private final By Password = By.id("Password");
     private final By Confirm_password = By.id("ConfirmPassword");
     private final By register_button = By.xpath("//button[@name='register-button']");
-
     private final By ConfirmRegistration = By.xpath("//div[@class=\"result\"]");
+    private final By ValidationMessage = By.xpath("//li[contains(text(),'The specified email already exists')]");
 
     public P01_RegisterPage selectGender() {
         driver.findElement(this.Gender).click();
@@ -90,5 +90,9 @@ public class P01_RegisterPage {
 
     public boolean confirmationMessage() {
         return driver.findElement(this.ConfirmRegistration).getText().equals("Your registration completed");
+    }
+
+    public boolean ValidationMessage() {
+        return driver.findElement(this.ValidationMessage).getText().equals("The specified email already exists");
     }
 }

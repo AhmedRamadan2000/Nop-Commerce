@@ -24,21 +24,25 @@ public class TC01_Registration extends TestBase {
         new P01_RegisterPage(driver).selectGender().addFirst_name(FName).addLast_name(LastName).selectDay()
                 .selectMonth().selectYear().addEmail(EMAIL).addCompany_name(companyName).addPassword(PASSWORD)
                 .addConfirm_password(PASSWORD).clickRegister_button();
-        //Assert result
+        //ToDo: Assert the user register successfully
         Assert.assertTrue( new P01_RegisterPage(driver).confirmationMessage());
         new Main(driver).clickLoginlink();
     }
 
-//    @Test(enabled = true)
-//    public void RegisterNewUserWithInvalidData_N() {
-//
-//        new  Main(driver).clickRegisterlink();
-//FName= "dsvsdvsd";
-//        new P01_RegisterPage(driver).selectGender().addFirst_name(FName).addLast_name(LastName).selectDay()
-//                .selectMonth().selectYear().addEmail(EMAIL).addCompany_name(companyName).addPassword(PASSWORD)
-//                .addConfirm_password(PASSWORD).clickRegister_button();
-//        new Main(driver).clickLoginlink();
-//        //Assert result
-//        Assert.assertFalse( new P01_RegisterPage(driver).confirmationMessage());
-//    }
+    @Test(enabled = true)
+    public void RegisterNewUserWithInvalidData_N() {
+        //ToDo: Register with new user
+        new  Main(driver).clickRegisterlink();
+        EMAIL= "admin@admin.com";
+        new P01_RegisterPage(driver).selectGender().addFirst_name(FName).addLast_name(LastName).selectDay()
+                .selectMonth().selectYear().addEmail(EMAIL).addCompany_name(companyName).addPassword(PASSWORD)
+                .addConfirm_password(PASSWORD).clickRegister_button();
+        //ToDo: Register again with the same email
+        new  Main(driver).clickRegisterlink();
+        new P01_RegisterPage(driver).selectGender().addFirst_name(FName).addLast_name(LastName).selectDay()
+                .selectMonth().selectYear().addEmail(EMAIL).addCompany_name(companyName).addPassword(PASSWORD)
+                .addConfirm_password(PASSWORD).clickRegister_button();
+        //ToDo: Assert the validation message appears
+        Assert.assertTrue( new P01_RegisterPage(driver).ValidationMessage());
+    }
 }

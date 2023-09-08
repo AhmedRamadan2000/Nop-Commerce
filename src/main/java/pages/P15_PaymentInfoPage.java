@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import utility.Utilities;
 
+import java.util.concurrent.TimeUnit;
+
 public class P15_PaymentInfoPage {
     WebDriver driver;
     Select select;
@@ -53,7 +55,7 @@ public class P15_PaymentInfoPage {
 
     public P15_PaymentInfoPage SelectExpiryDate() {
         select = new Select(driver.findElement(this.ExpirationDate));
-        select.selectByIndex(Utilities.generateRandomNumber(2024, 2030));
+        select.selectByIndex(Utilities.generateRandomNumber(1, 12));
         return this;
     }
 

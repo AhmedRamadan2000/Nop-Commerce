@@ -14,12 +14,14 @@ public class TC16_ConfirmOrder extends TestBase {
     public static String PhoneNumber = faker.phoneNumber().cellPhone();
     public static String Address = faker.address().streetAddress();
     public static String CardNumber = faker.finance().creditCard();
+    public static String CardNum = faker.finance().creditCard().strip();
     public static String HolderName = faker.name().fullName();
-    public static String Code = faker.code().asin();
+    public static String Code = "500";
 
 
     @Test(enabled = true)
-    public void ConfirmOrder() {
+    public void ConfirmOrder() throws InterruptedException {
+
         //ToDo: login with valid user
         new Main(driver).clickLoginlink();
         new P02_LoginPage(driver).addUserEmail(EMAIL).addUserPassword(PASSWORD).clickLoginButton();
@@ -45,21 +47,25 @@ public class TC16_ConfirmOrder extends TestBase {
 //        Assert.assertTrue(new P14_ShippingMethodPage(driver).ShippingMethodselected());
         new P14_ShippingMethodPage(driver).SelectShippingMethod();
 
-        //ToDo: Add Credit Card as a payment method
+        //ToDo: Select Credit Card as a payment method
         new P15_PaymentInfoPage(driver).SelectCreditCard();
 
         //ToDo: Assert the Credit Card payment method is selected
         Assert.assertTrue(new P15_PaymentInfoPage(driver).CreditCardMethodIsSelected());
-        new P15_PaymentInfoPage(driver).ContinuePaymentMethod().CardHolderName(HolderName).CardNumber(CardNumber).SelectExpiryDate().CardCode(Code).ContinuePaymentInfo();
+
+        //ToDo: Add Credit card data
+        new P15_PaymentInfoPage(driver).ContinuePaymentMethod().CardHolderName(HolderName).CardNumber(CardNum).SelectExpiryDate().CardCode(Code).ContinuePaymentInfo();
 
         //ToDo: Assert the confirm button is appear
         Assert.assertTrue(new P16_ConfirmOrderPage(driver).ConfirmOrderButtonIsAppear());
+
+        //ToDo: Confirm the order
         new P16_ConfirmOrderPage(driver).ConfirmOrder();
 
-        //ToDo: Assert the confirm message is appear
+        //ToDo: Assert the confirmation message is appear
         Assert.assertTrue(new P16_ConfirmOrderPage(driver).ConfirmSuccessMessageAppear());
 
-        ////ToDo: Continue shopping
+        //ToDo: Continue shopping
         new P16_ConfirmOrderPage(driver).ContinueShopping();
     }
 }

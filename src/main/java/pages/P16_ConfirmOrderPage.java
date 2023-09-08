@@ -11,14 +11,16 @@ public class P16_ConfirmOrderPage {
     }
 
     //define locators
-    private final By ConfirmOrder = By.xpath("//button[contains(text(),'Confirm')]");
+    private final By ConfirmOrderButton = By.xpath("//button[contains(text(),'Confirm')]");
 
     private final By SuccessfulMessage = By.xpath("//strong[contains(text(),'Your order has been successfully processed!')]");
 
     private final By ContinueShoppingButton = By.xpath("//button[contains(text(),'Continue')]");
 
+    private final By AssertOnMessage = By.xpath("//div[contains(text(),'Gift wrapping: No')]");
+
     public P16_ConfirmOrderPage ConfirmOrder() {
-        driver.findElement(this.ConfirmOrder).click();
+        driver.findElement(this.ConfirmOrderButton).click();
         return this;
     }
 
@@ -32,7 +34,11 @@ public class P16_ConfirmOrderPage {
         return this;
     }
 
-    public boolean ConfirmOrderButtonIsAppear(){
-        return driver.findElement(this.ConfirmOrder).isDisplayed();
-}
+    public boolean ConfirmOrderButtonIsAppear() {
+        return driver.findElement(this.ConfirmOrderButton).isEnabled();
+    }
+
+    public boolean TotalOrder() {
+        return driver.findElement(this.AssertOnMessage).getText().equals("Gift wrapping");
+    }
 }

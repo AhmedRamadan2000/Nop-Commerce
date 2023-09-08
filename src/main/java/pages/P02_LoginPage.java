@@ -16,9 +16,10 @@ public class P02_LoginPage {
     private final By Email = By.id("Email");
     private final By Password = By.id("Password");
     private final By LoginButton = By.xpath("//button[contains(text(),'Log in')]");
-//    private final By continue_button = By.xpath("//a[contains(text(),'Continue')]");
 
     private final By LogoutButton = By.xpath("//a[contains(text(),'Log out')]");
+
+    private final By ValidationMessage = By.xpath("//li[contains(text(),'No customer account found')]");
 
     public P02_LoginPage addUserEmail(String email) {
         driver.findElement(this.Email).sendKeys(email);
@@ -37,5 +38,9 @@ public class P02_LoginPage {
 
     public boolean LogoutButton() {
         return driver.findElement(this.LogoutButton).getText().equals("Log out");
+    }
+
+    public boolean ValidationMessage() {
+        return driver.findElement(this.ValidationMessage).getText().equals("No customer account found");
     }
 }

@@ -2,32 +2,40 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Nop commerce">
     <parameter name="browser" value=""/>
-    <test name="Check Login with Invalid Email and Valid Password">
+<!--    <test name="Check Login with Invalid Email and Valid Password">-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC02_LoginPage">-->
+<!--                <methods>-->
+<!--                    <include name="loginWithInvalidEmailandValidPassword_N"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Check Login with Valid Email and Invalid Password">-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC02_LoginPage">-->
+<!--                <methods>-->
+<!--                    <include name="loginWithValidEmailandInvalidPassword_N"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Check Login with Invalid Email and Invalid Password">-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC02_LoginPage">-->
+<!--                <methods>-->
+<!--                    <include name="loginWithInvalidEmailandInvalidPassword_N"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="Register New User With Invalid Data">
         <classes>
-            <class name="testcases.TC02_LoginPage">
+            <class name="testcases.TC01_Registration">
                 <methods>
-                    <include name="loginWithInvalidEmailandValidPassword_N"/>
+                    <include name="RegisterNewUserWithInvalidData_N"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="Check Login with Valid Email and Invalid Password">
-        <classes>
-            <class name="testcases.TC02_LoginPage">
-                <methods>
-                    <include name="loginWithValidEmailandInvalidPassword_N"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="Check Login with Invalid Email and Invalid Password">
-        <classes>
-            <class name="testcases.TC02_LoginPage">
-                <methods>
-                    <include name="loginWithInvalidEmailandInvalidPassword_N"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-
 </suite>
