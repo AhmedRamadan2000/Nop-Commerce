@@ -17,6 +17,7 @@ public class TC04_SearchForProductPage extends TestBase {
     public void SearchForProduct() {
         new Main(driver).clickLoginlink();
         new P02_LoginPage(driver).addUserEmail(EMAIL).addUserPassword(PASSWORD).clickLoginButton();
-        new P04_SearchForProductPage(driver).AddTextInTheSearchField(product).ClickOnSearchButton().SearchResultDisplay();
+        new P04_SearchForProductPage(driver).AddTextInTheSearchField(product).ClickOnSearchButton();
+        Assert.assertTrue( new P04_SearchForProductPage(driver).SearchResult());
     }
 }

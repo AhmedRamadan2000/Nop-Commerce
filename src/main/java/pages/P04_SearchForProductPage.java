@@ -15,7 +15,7 @@ public class P04_SearchForProductPage {
 
     private final By SearchButton = By.xpath("//button[contains(text(),'Search')]");
 
-    private final By SearchResult = By.xpath("//body/div[6]/div[3]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/h2[1]/a[1]");
+    private final By SearchResult = By.xpath("//a[contains(text(),'Apple MacBook Pro 13-inch')]");
 
     public P04_SearchForProductPage AddTextInTheSearchField(String product) {
 
@@ -29,9 +29,7 @@ public class P04_SearchForProductPage {
         return this;
     }
 
-    public P04_SearchForProductPage SearchResultDisplay() {
-
-        driver.findElement(this.SearchResult).isDisplayed();
-        return this;
+    public boolean SearchResult(){
+        return  driver.findElement(this.SearchResult).isDisplayed();
     }
 }

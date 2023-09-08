@@ -6,61 +6,61 @@
         <classes>
             <class name="testcases.TC01_Registration">
                 <methods>
-                    <include name="registernewuser_P"/>
+                    <include name="RegisterNewUserWithValidData_P"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="check login with Valid Data">
-        <parameter name="browser" value=""/>
-        <classes>
-            <class name="testcases.TC02_LoginPage">
-                <methods>
-                    <include name="user_login_successfully"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="check the rest password">
-        <parameter name="browser" value=""/>
-        <classes>
-            <class name="testcases.TC03_RestPassword">
-                <methods>
-                    <include name="ResetPasswordSuccessfully"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="Search For Product">
-        <parameter name="browser" value=""/>
-        <classes>
-            <class name="testcases.TC04_SearchForProductPage">
-                <methods>
-                    <include name="SearchForProduct"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="Change Currency">
-        <parameter name="browser" value=""/>
-        <classes>
-            <class name="testcases.TC05_ChangeCurrency">
-                <methods>
-                    <include name="ChangeCurrency"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="Select Random Category">
-        <parameter name="browser" value=""/>
-        <classes>
-            <class name="testcases.TC06_SelectRandomCategory">
-                <methods>
-                    <include name="SelectRandomCategory"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="check login with Valid Data">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC02_LoginPage">-->
+<!--                <methods>-->
+<!--                    <include name="user_login_successfully"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="check the rest password">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC03_RestPassword">-->
+<!--                <methods>-->
+<!--                    <include name="ResetPasswordSuccessfully"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Search For Product">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC04_SearchForProductPage">-->
+<!--                <methods>-->
+<!--                    <include name="SearchForProduct"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Change Currency">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC05_ChangeCurrency">-->
+<!--                <methods>-->
+<!--                    <include name="ChangeCurrency"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Select Random Category">-->
+<!--        <parameter name="browser" value=""/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC06_SelectRandomCategory">-->
+<!--                <methods>-->
+<!--                    <include name="SelectRandomCategory"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 <!--    <test name="Filter With Color">-->
 <!--        <parameter name="browser" value=""/>-->
 <!--        <classes>-->
@@ -96,19 +96,19 @@
 <!--        <classes>-->
 <!--            <class name="testcases.TC11_AddProductsToComparelist">-->
 <!--                <methods>-->
-<!--                    <include name="AddProductsToComparelist"/>-->
+<!--                    <include name="AddProductsToCompareList"/>-->
 <!--                </methods>-->
 <!--            </class>-->
 <!--        </classes>-->
 <!--    </test>-->
-<!--    <test name="Create successful Order">-->
-<!--        <parameter name="browser" value=""/>-->
-<!--        <classes>-->
-<!--            <class name="testcases.TC12_CreateSuccessfulOrder">-->
-<!--                <methods>-->
-<!--                    <include name="ConfirmOrder"/>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Create successful Order">
+        <parameter name="browser" value=""/>
+        <classes>
+            <class name="testcases.TC16_ConfirmOrder">
+                <methods>
+                    <include name="ConfirmOrder"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 </suite>

@@ -24,8 +24,8 @@ public class TestBase {
         driver.get("https://demo.nopcommerce.com/");
     }
 
-    @AfterTest
-    public void quite() {
-        driver.quit();
-    }
+//    @AfterTest
+//    public void quite() {
+//        driver.quit();
+//    }
 }
