@@ -13,8 +13,7 @@ public class TC16_ConfirmOrder extends TestBase {
     public static String City = faker.address().city();
     public static String PhoneNumber = faker.phoneNumber().cellPhone();
     public static String Address = faker.address().streetAddress();
-    public static String CardNumber = faker.finance().creditCard();
-    public static String CardNum = faker.finance().creditCard().strip();
+    public static String CardNum = "4263982640269299";
     public static String HolderName = faker.name().fullName();
     public static String Code = "500";
     @Test(enabled = true)
@@ -42,7 +41,6 @@ public class TC16_ConfirmOrder extends TestBase {
         new P13_BillingAddressPage(driver).SelectCountry().AddCity(City).AddAddress(Address).AddPostalCode().AddPhoneNum(PhoneNumber).ClickOnContinueBilling();
 
         //ToDo: Add shipping method
-//        Assert.assertTrue(new P14_ShippingMethodPage(driver).ShippingMethodselected());
         new P14_ShippingMethodPage(driver).SelectShippingMethod();
 
         //ToDo: Select Credit Card as a payment method

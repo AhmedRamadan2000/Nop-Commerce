@@ -37,8 +37,4 @@ public class P16_ConfirmOrderPage {
     public boolean ConfirmOrderButtonIsAppear() {
         return driver.findElement(this.ConfirmOrderButton).isEnabled();
     }
-
-    public boolean TotalOrder() {
-        return driver.findElement(this.AssertOnMessage).getText().equals("Gift wrapping");
-    }
 }

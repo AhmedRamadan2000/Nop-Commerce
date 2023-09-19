@@ -10,8 +10,7 @@ public class TC15_PaymentInfo extends TestBase{
     public static Faker faker = new Faker();
     public static String CardNumber = "4263982640269299";
     public static String HolderName = faker.name().fullName();
-    public static String Code = "6622";
-
+    public static String Code = "500";
 
     @Test(enabled = true)
     public void ConfirmPaymentInfo() {

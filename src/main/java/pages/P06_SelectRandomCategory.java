@@ -2,13 +2,11 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class P06_SelectRandomCategory {
     static WebDriver driver;
     Actions actions;
-    private WebElement RandomCategory;
 
     public P06_SelectRandomCategory(WebDriver driver) {
         this.driver = driver;

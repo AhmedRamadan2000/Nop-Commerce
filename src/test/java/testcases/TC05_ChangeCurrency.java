@@ -5,8 +5,6 @@ import org.testng.annotations.Test;
 import pages.Main;
 import pages.P02_LoginPage;
 
-import java.util.concurrent.TimeUnit;
-
 import static testcases.TC01_Registration.EMAIL;
 import static testcases.TC01_Registration.PASSWORD;
 
