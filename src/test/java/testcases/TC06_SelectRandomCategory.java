@@ -1,14 +1,10 @@
 package testcases;
 
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.Main;
 import pages.P02_LoginPage;
 import pages.P06_SelectRandomCategory;
-import utility.Utilities;
-
-import java.util.List;
 
 import static testcases.TC01_Registration.*;
 

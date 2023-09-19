@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import utility.Utilities;
 
-import java.util.concurrent.TimeUnit;
-
 public class P15_PaymentInfoPage {
     WebDriver driver;
     Select select;

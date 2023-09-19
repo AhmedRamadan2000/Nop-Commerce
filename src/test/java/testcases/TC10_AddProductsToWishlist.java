@@ -4,11 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.Main;
 import pages.P02_LoginPage;
-import pages.P09_AddProductsToShoppingCart;
 import pages.P10_AddProductsToWishlist;
-
-import java.util.concurrent.TimeUnit;
-
 import static testcases.TC01_Registration.*;
 import static testcases.TC01_Registration.PASSWORD;
 

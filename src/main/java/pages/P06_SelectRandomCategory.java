@@ -4,9 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utility.Utilities;
-
-import java.util.List;
 
 public class P06_SelectRandomCategory {
     static WebDriver driver;

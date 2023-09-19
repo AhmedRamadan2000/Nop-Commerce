@@ -3,15 +3,14 @@ package testcases;
 import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.P14_ShippingMethodPage;
 import pages.P15_PaymentInfoPage;
 
 public class TC15_PaymentInfo extends TestBase{
 
     public static Faker faker = new Faker();
-    public static String CardNumber = faker.finance().creditCard();
+    public static String CardNumber = "4263982640269299";
     public static String HolderName = faker.name().fullName();
-    public static String Code = faker.code().asin();
+    public static String Code = "6622";
 
 
     @Test(enabled = true)

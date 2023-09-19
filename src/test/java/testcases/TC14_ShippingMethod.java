@@ -2,7 +2,6 @@ package testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.P11_AddProductsToComparelist;
 import pages.P14_ShippingMethodPage;
 
 public class TC14_ShippingMethod extends TestBase {

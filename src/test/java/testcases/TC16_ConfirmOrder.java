@@ -17,8 +17,6 @@ public class TC16_ConfirmOrder extends TestBase {
     public static String CardNum = faker.finance().creditCard().strip();
     public static String HolderName = faker.name().fullName();
     public static String Code = "500";
-
-
     @Test(enabled = true)
     public void ConfirmOrder() throws InterruptedException {
 
