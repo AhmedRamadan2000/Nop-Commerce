@@ -25,7 +25,7 @@ public class Utilities {
     public static void Capturescreenshots(WebDriver driver, String screenshotName){
         TakesScreenshot takesScreenshot= (TakesScreenshot) driver;
         try {
-            FileHandler.copy(takesScreenshot.getScreenshotAs(OutputType.FILE),new File(System.getProperty("user.dir")+"/src/test/resources"+screenshotName+".png"));
+            FileHandler.copy(takesScreenshot.getScreenshotAs(OutputType.FILE),new File(System.getProperty("user.dir")+"/src/test/resources/screenshots/"+screenshotName+".png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

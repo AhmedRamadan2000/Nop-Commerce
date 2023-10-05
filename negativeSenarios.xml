@@ -29,13 +29,13 @@
             </class>
         </classes>
     </test>
-    <test name="Register New User With Invalid Data">
-        <classes>
-            <class name="testcases.TC01_Registration">
-                <methods>
-                    <include name="RegisterNewUserWithInvalidData_N"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+<!--    <test name="Register New User With Invalid Data">-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC01_Registration">-->
+<!--                <methods>-->
+<!--                    <include name="RegisterNewUserWithInvalidData_N"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

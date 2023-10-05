@@ -20,12 +20,14 @@ public class TestBase {
         driver = DriverFactory.getNewInstance(browser);
         setDriver(driver);
         driver.manage().window().maximize();
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         driver.get("https://demo.nopcommerce.com/");
     }
 
-//    @AfterTest
-//    public void quite() {
-//        driver.quit();
-//    }
+    @AfterTest
+    public void quite() {
+        driver.quit();
+    }
 }

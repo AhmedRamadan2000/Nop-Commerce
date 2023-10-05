@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.Main;
 import pages.P02_LoginPage;
 import pages.P04_SearchForProductPage;
+import utility.Utilities;
 
 import static testcases.TC01_Registration.EMAIL;
 import static testcases.TC01_Registration.PASSWORD;
@@ -18,6 +19,8 @@ public class TC04_SearchForProductPage extends TestBase {
         new Main(driver).clickLoginlink();
         new P02_LoginPage(driver).addUserEmail(EMAIL).addUserPassword(PASSWORD).clickLoginButton();
         new P04_SearchForProductPage(driver).AddTextInTheSearchField(product).ClickOnSearchButton();
-        Assert.assertTrue( new P04_SearchForProductPage(driver).SearchResult());
+        //ToDo: Take a screenshot
+        Utilities.Capturescreenshots(driver, "SearchForProduct");
+        Assert.assertTrue(new P04_SearchForProductPage(driver).SearchResult());
     }
 }

@@ -11,8 +11,7 @@ public class TC14_ShippingMethod extends TestBase {
         new TC13_BillingAddress().ConfirmBilling();
 
         //ToDo: Add shipping method
-        Assert.assertTrue( new P14_ShippingMethodPage(driver).ShippingMethodselected());
+        Assert.assertTrue(new P14_ShippingMethodPage(driver).ShippingMethodselected());
         new P14_ShippingMethodPage(driver).SelectShippingMethod();
-
     }
 }

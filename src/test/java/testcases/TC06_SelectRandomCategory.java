@@ -5,7 +5,9 @@ import org.testng.annotations.Test;
 import pages.Main;
 import pages.P02_LoginPage;
 import pages.P06_SelectRandomCategory;
-import static testcases.TC01_Registration.*;
+
+import static testcases.TC01_Registration.EMAIL;
+import static testcases.TC01_Registration.PASSWORD;
 
 public class TC06_SelectRandomCategory extends TestBase {
 

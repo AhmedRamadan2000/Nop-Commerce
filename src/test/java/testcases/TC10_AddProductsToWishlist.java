@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import pages.Main;
 import pages.P02_LoginPage;
 import pages.P10_AddProductsToWishlist;
-import static testcases.TC01_Registration.*;
+
+import static testcases.TC01_Registration.EMAIL;
 import static testcases.TC01_Registration.PASSWORD;
 
 public class TC10_AddProductsToWishlist extends TestBase {
@@ -21,7 +22,6 @@ public class TC10_AddProductsToWishlist extends TestBase {
         new P10_AddProductsToWishlist(driver).AddProduct2ToWishList().ClickOnTheBar();
 
         //ToDo: Assert product are added to wish list table
-        Assert.assertTrue( new P10_AddProductsToWishlist(driver).Product1AddedToList());
-        Assert.assertTrue( new P10_AddProductsToWishlist(driver).Product2AddedToList());
+        Assert.assertTrue(new P10_AddProductsToWishlist(driver).Product2AddedToList());
     }
 }

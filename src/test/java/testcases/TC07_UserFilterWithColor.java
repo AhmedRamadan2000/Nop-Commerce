@@ -18,6 +18,6 @@ public class TC07_UserFilterWithColor extends TestBase {
         new P02_LoginPage(driver).addUserEmail(EMAIL).addUserPassword(PASSWORD).clickLoginButton();
         new P06_SelectRandomCategory(driver).hoverOnCategory(driver).selectedCategory();
         new P07_UserFilterWithColor(driver).selectColor();
-        Assert.assertTrue( new P07_UserFilterWithColor(driver).VerifyProductThatAppear());
+        Assert.assertTrue(new P07_UserFilterWithColor(driver).VerifyProductThatAppear());
     }
 }
