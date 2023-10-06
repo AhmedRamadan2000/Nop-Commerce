@@ -1,6 +1,6 @@
 # nopcommerce
 
-![Nop Commerce Logo](https://demo.nopcommerce.com/images/thumbs/0000088_banner_01.webp.jpg)
+![Nop Commerce Logo](https://www.nopcommerce.com/en/branding)
 
 ## Table of Contents
 
@@ -18,8 +18,11 @@ Nop Commerce is a shoppoing application that provides various shopping services 
 ## Features
 
 - *Resgitserstion*: Create a new user for shopping.
-- *Login*: User can login to make an online order.
+- *Login*: The user can log in to make an online order.
 - *Search feature*: To search for a specific product.
+- *Filter feature*: To filter the products with specific conditions.
+- *Wish List feature*: To add products to the wishlist menu to buy them later.
+- *Compare feature*: To Compare between products.
 - *Online payment*: To search for a specific product.
 - *Security*: Ensure secure and encrypted transactions.
 
